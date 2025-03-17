@@ -1,0 +1,35 @@
+baseURL = 'example.ru'
+title = 'Hugo Main Title'
+theme = 'apol'
+
+languageCode = 'ru'
+defaultContentLanguage = 'ru'
+defaultContentLanguageInSubdir = true
+disableDefaultLanguageRedirect = false
+
+[languages]
+  [languages.ru]
+    # если true и defaultContentLanguage = 'ru', то будет ошибка:
+    # Failed to reload config: failed to create config from result: cannot disable default content language "ru" 
+    disabled = false
+    languageCode = 'ru'
+    languageDirection = 'ltr'
+    languageName = 'Russia'
+    title = 'Шаблон Hugo'
+    timeZone = 'Europe/Moscow'
+    copyright = 'Все права защищены'
+    weight = 1
+    [languages.ru.pagination]
+      path = 'страница'
+
+  [languages.en]
+    disabled = false
+    languageCode = 'en-US'
+    languageDirection = 'ltr'
+    languageName = 'English'
+    title = 'Hugo Template'
+    timeZone = 'America/New_York'
+    copyright = 'All rights reserved'
+    weight = 2
+    [languages.en.pagination]
+      path = 'page'

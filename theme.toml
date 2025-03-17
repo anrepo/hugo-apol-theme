@@ -1,0 +1,13 @@
+name = "Apol Theme"
+license = "MIT"
+licenselink = ""
+description = "Basic theme for Hugo web sites"
+homepage = "https://github.com/anrepo/hugo-apol-theme"
+demosite = ""
+tags = ["website", "starter", "responsive", "blog", "multilingual"]
+features = ["posts", "shortcodes", "related content", "comments"]
+min_version = "0.128.0"
+
+[author]
+  name = "Apol"
+  homepage = "https://github.com/anrepo"

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }}</title>
+</head>
+<body>
+  <h1>{{ .Title }}</h1>
+
+  <div>{{ . }}</div>
+
+  {{- $slice := slice "one" "two" "three" -}}
+
+  <div>{{ reflect.IsSlice $slice }}</div>
+
+  <ul>
+  {{ range $slice }}
+    <li>{{ . }}</li>
+  {{ end }}
+  </ul>
+
+  {{ with "some" }}
+  <p>{{ . }}</p>
+  {{ end }}
+
+  <div>Continue:</div>
+  {{ $s := slice "foo" "bar" "baz" }}
+  <ul>
+  {{- range $s -}}
+    {{- if eq . "bar" -}}
+      {{ continue }}
+    {{ end }}
+    <li>{{ . }}</li>
+  {{- end -}}
+  </ul>
+
+  <div>Break:</div>
+  {{ $s := slice "foo" "bar" "baz" }}
+  <ul>
+  {{- range $s -}}
+    {{- if eq . "bar" -}}{{ break }}{{- end -}}
+    <li>{{ . }}</li>
+  {{- end -}}
+  </ul>
+
+  {{ $convertToLower := true }}
+  {{- if $convertToLower -}}
+  <h2>{{- strings.ToLower .Title -}}</h2>
+  {{ end }}
+
+
+  {{- $arg1 := -4 -}}
+  {{- $arg2 := 5 -}}
+  {{- $arg3 := 8 -}}
+
+  {{ $v := or $arg1 $arg2 $arg3 }}
+  <div>{{ $v }}</div>
+
+  {{- $v := or
+    $arg1
+    $arg2
+    $arg3
+  -}}
+  <div>{{ $v }}</div>
+
+
+  {{ $msg := "This is line one.\nThis is line two." }}
+
+  <div>Message 1: {{ $msg }}</div>
+
+  {{ $msg := `This is line one.
+This is line two.`
+  }}
+
+  <div>Message 2: {{ $msg }}</div>
+
+
+  {{ $total := 3 }}
+  {{ range slice 7 11 21 }}
+    {{ $total = add $total . }}
+  {{ end }}
+
+  <div>Total: {{ $total }}</div>
+
+
+  {{ $start := true }}
+  {{ if $start }}
+    {{ $var1 := 18 }}
+  {{end}}
+  <!-- $var1 -->
+
+  <script>
+    let myFirstPromise = new Promise((resolve, reject) => {
+      console.log('Запуск промиса');
+
+      // Мы вызываем resolve(...), когда асинхронная операция завершилась успешно, и reject(...), когда она не удалась.
+      // В этом примере мы используем setTimeout(...), чтобы симулировать асинхронный код.
+      // В реальности вы, скорее всего, будете использовать XHR, HTML5 API или что-то подобное.
+      setTimeout(function () {
+        resolve("Success!"); // Ура! Всё прошло хорошо!
+      }, 3000);
+    });
+
+    myFirstPromise.then((successMessage) => {
+      // successMessage - это что угодно, что мы передали в функцию resolve(...) выше.
+      // Это необязательно строка, но если это всего лишь сообщение об успешном завершении, это наверняка будет она.
+      console.log("Ура! " + successMessage);
+    });
+  </script>
+
+</body>
+</html>
