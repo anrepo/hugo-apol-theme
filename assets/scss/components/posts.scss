@@ -1,0 +1,70 @@
+.post-card {
+  &__link {
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-decoration: none;
+
+    &:hover {
+      box-shadow: 0 0 4px 4px rgba(0, 161, 255, 0.4);
+    }
+  }
+
+  &__list {
+    padding: 0.1px 0;
+    gap: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media screen and (max-width: 1300px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 520px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  &__image {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+  }
+  
+  &__content {
+    padding: 1rem;
+  }
+
+  &__title {
+    color: var(--color);
+    font-weight: bold;
+  }
+
+  &__description {
+    color: var(--color);
+  }
+}
+
+// For Single Page
+.post {
+  &-description {
+    color: var(--color);
+    font-style: italic;
+  }
+
+  &-image-container {
+    height: 450px;
+    padding: 1.2rem 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

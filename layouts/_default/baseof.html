@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}" data-theme="light">
 <head>
   <!-- можно переопределить при помощи конструкции (define "head") -->
   {{ block "head" . }}
@@ -18,7 +18,7 @@
 
     <div>site.Language</div>
     <div>{{ site.Language }}</div>
-    
+
     <div>site.Language.LanguageCode</div>
     <div>{{ site.Language.LanguageCode }}</div>
 
@@ -27,16 +27,16 @@
 
     <div>.Site</div>
     <div>{{ .Site }}</div>
-    
+
     <div>.Site.Language</div>
     <div>{{ .Site.Language }}</div>
-  
+
     <div>.Site.Language.Lang</div>
     <div>{{ .Site.Language.Lang }}</div>
-  
+
     <div>.Site.Language.LanguageCode </div>
     <div>{{ .Site.Language.LanguageCode }}</div>
-    
+
     <div>.Site.Language.LanguageDirection </div>
     <div>{{ .Site.Language.LanguageDirection }}</div>
   </div>

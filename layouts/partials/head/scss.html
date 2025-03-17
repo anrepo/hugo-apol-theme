@@ -1,0 +1,2 @@
+{{- $scss := resources.Get "scss/main.scss" | css.Sass (dict "targetPath" "css/style.css") -}}
+<link rel="stylesheet" href="{{ $scss.RelPermalink }}" />
