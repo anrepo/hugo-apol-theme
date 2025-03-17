@@ -1,7 +1,5 @@
 # Apol Hugo Theme
 
-## Features
-
 ## Установка темы
 
 Для установкии темы обязательно должен быть инициализирован `git` иначе второй шаг не сработает! Сделать это можно при помощи команды ниже.
@@ -19,5 +17,3 @@ git submodule add https://github.com/anrepo/hugo-apol-theme.git themes/apol
 Из директории `/exampleSite` переносим все файлы в корень своего проекта.
 
 Теперь проект с темой можно запустить командой `hugo server` или запустив `run.bat`.
-
-## Configuration
