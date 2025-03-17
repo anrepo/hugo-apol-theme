@@ -9,36 +9,38 @@
 </head>
 <body>
 
-  <div>{{ .Param "description" }}</div>
+  <div class="container">
+    <div>{{ .Param "description" }}</div>
 
-  <!-- display: {none | grid} -->
-  <div style="display: grid; grid-template-columns: 1fr 1fr;">
-    <div>site</div>
-    <div>{{ site }}</div>
+    <!-- display: {none | grid} -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr;">
+      <div>site</div>
+      <div>{{ site }}</div>
 
-    <div>site.Language</div>
-    <div>{{ site.Language }}</div>
+      <div>site.Language</div>
+      <div>{{ site.Language }}</div>
 
-    <div>site.Language.LanguageCode</div>
-    <div>{{ site.Language.LanguageCode }}</div>
+      <div>site.Language.LanguageCode</div>
+      <div>{{ site.Language.LanguageCode }}</div>
 
-    <div>site.Language.LanguageDirection</div>
-    <div>{{ site.Language.LanguageDirection }}</div>
+      <div>site.Language.LanguageDirection</div>
+      <div>{{ site.Language.LanguageDirection }}</div>
 
-    <div>.Site</div>
-    <div>{{ .Site }}</div>
+      <div>.Site</div>
+      <div>{{ .Site }}</div>
 
-    <div>.Site.Language</div>
-    <div>{{ .Site.Language }}</div>
+      <div>.Site.Language</div>
+      <div>{{ .Site.Language }}</div>
 
-    <div>.Site.Language.Lang</div>
-    <div>{{ .Site.Language.Lang }}</div>
+      <div>.Site.Language.Lang</div>
+      <div>{{ .Site.Language.Lang }}</div>
 
-    <div>.Site.Language.LanguageCode </div>
-    <div>{{ .Site.Language.LanguageCode }}</div>
+      <div>.Site.Language.LanguageCode </div>
+      <div>{{ .Site.Language.LanguageCode }}</div>
 
-    <div>.Site.Language.LanguageDirection </div>
-    <div>{{ .Site.Language.LanguageDirection }}</div>
+      <div>.Site.Language.LanguageDirection </div>
+      <div>{{ .Site.Language.LanguageDirection }}</div>
+    </div>
   </div>
 
   <!-- добавляем комментарий в HTML разметку -->
